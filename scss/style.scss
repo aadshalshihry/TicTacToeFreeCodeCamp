@@ -1,5 +1,6 @@
 $bgColor: #232526;
 $darker: #101111;
+
 .container {
   min-width: 700px;
 }
@@ -10,7 +11,7 @@ $darker: #101111;
 
 .bock {
   background: gray;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0 0;
   height: 60px;
   position: relative;
   top: 60px;
@@ -64,7 +65,7 @@ $darker: #101111;
   font-size: 5em;
   border-right: 3px gray solid;
   border-bottom: 3px gray solid;
-  padding: 0px 30px;
+  padding: 0 30px;
   width: 118px;
   height: 111px;
 }
@@ -73,7 +74,7 @@ $darker: #101111;
   font-size: 5em;
   border-right: 3px gray solid;
   border-bottom: 3px gray solid;
-  padding: 0px 30px;
+  padding: 0 30px;
   width: 118px;
   height: 111px;
 }
@@ -112,15 +113,18 @@ li h4 {
   display: block;
   font-weight: normal;
   font-family: 'Raleway', sans-serif;
+
   li {
     margin-left: -50px;
     width: 180px;
     cursor: pointer;
+
     &:hover {
       border: 1px white solid;
       border-radius: 10px;
       background: $darker;
     }
+
     h4 {
       margin-left: 6px;
     }
@@ -133,12 +137,15 @@ li h4 {
 
 #xOrO {
   display: none;
+
   h3 {
     font-weight: bold;
   }
+
   li:first-child {
     margin-top: 3.8em;
   }
+
   li {
     margin-left: -2em;
     font-weight: lighter;
@@ -147,9 +154,25 @@ li h4 {
     width: 200px;
     cursor: pointer;
   }
+
   li:hover {
     border: 1px white solid;
     border-radius: 10px;
     background: $darker;
+  }
+}
+
+#hider {
+  width: 355px;
+  height: 335px;
+  background: black;
+  float: left;
+  opacity: 0.7;
+  margin-top: -340px;
+  display: none;
+
+  h2 {
+    margin-top: 150px;
+    color: #26e814;
   }
 }
