@@ -18,13 +18,17 @@ let winObj = {
 	p2: 0
 }
 
+let someOneWin = false;
+
 function increamentWinObj(turn) {
 	if (turn === 1) {
 		winObj.p1++;
 		$("#player1").html(winObj.p1);
+		return true;
 	} else {
 		winObj.p2++;
 		$("#player2").html(winObj.p2);
+		return true;
 	}
 }
 
@@ -43,8 +47,8 @@ function beforeToggel(event) {
 	$("#game").css("display", "block");
 	if (event.data === true) {
 		turnObj = {
-			one: "O",
-			two: "X",
+			one: "X",
+			two: "O",
 			turn: 1,
 			countPlayer: 2,
 			countTurn: 0,
@@ -85,14 +89,16 @@ function checkWinner(col, row, turn) {
 function win(turn) {
 	$("#hider").css("display", "block");
 	$("#hider > h2").html("Player" + turn + " Win the game");
-	increamentWinObj(turn);
+	if(!someOneWin)
+		someOneWin = increamentWinObj(turn);
 	$("#continue").on('click', function () {
+		someOneWin = false;
 		resetBord();
 		printBord();
 		$("#hider").css("display", "none");
 		turnObj.countTurn = 0;
 		turnObj.turn = (turn === 1) ? 2 : 1;
-		if (turnObj.turn === 2)
+		if (turnObj.turn === 2 && turnObj.countPlayer === 1)
 			PCTurn();
 	})
 }
