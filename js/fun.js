@@ -1,4 +1,3 @@
-
 let bord = [
 	[" ", " ", " "],
 	[" ", " ", " "],
@@ -269,29 +268,3 @@ $("#row3 > .col3").on('click', {
 	col: 3,
 	sel: "#row3 > .col3"
 }, setValue);
-
-function setup() {
-	createCanvas(400, 400);
-	background(100);
-}
-
-function draw() {
-	ellipse(50, 50, 80, 80);
-}
-
-$(document).ready(function () {
-	$("#player1").html(winObj.p1);
-	$("#player2").html(winObj.p2);
-
-});
-
-
-/*
-	TODO:
-		1. fix tie problem
-		2. score for diagnal both side is not working correctly
-		3.
-
-*/
-
-//# sourceMappingURL=maps/app.min.js.map
