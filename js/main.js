@@ -1,10 +1,7 @@
 $(document).ready(function () {
-	let bord = [
-		[" ", " ", " "],
-		[" ", " ", " "],
-		[" ", " ", " "]
-	]
-	printBord(bord);
+
+	printBord();
+
 
 	// num of winning for player
 	let winObj = {
@@ -14,19 +11,10 @@ $(document).ready(function () {
 	$("#player1").html(winObj.p1);
 	$("#player2").html(winObj.p2);
 
-	// ex. turn1 = "X"
-	let turnObj = {
-		one: "X",
-		two: "O"
-	}
-
-	// the num of turn in whole game
-	let countTurn = 0;
-
 	// first menu, how many players,
 	// hid #before and show xOrO menu
-	$("#onePlayer").on('click', beforeToggel.bind(this, {}));
-	turnObj = $("#twoPlayer").on('click', beforeToggel.bind(this, turnObj));
+	$("#onePlayer").on('click', false, beforeToggel);
+	$("#twoPlayer").on('click', true, beforeToggel);
 
 
 
@@ -35,4 +23,5 @@ $(document).ready(function () {
 
 
 
-});;
+
+});
